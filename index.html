@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherFeather</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Combo&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <style>
+        body,
+        html {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            background-color: #040408;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .outer {
+            border-radius: 82px;
+            width: 994px;
+            height: 573px;
+            background-color: #272727;
+            padding: 15px;
+        }
+
+        nav {
+            color: white;
+            margin: 12px;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        .else {
+            display: flex;
+            gap: 64px;
+            font-size: larger;
+            margin-right: 15px;
+        }
+
+        .heading {
+            font-size: xx-large;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            /* position: absolute; */
+            /* top: 35%; */
+        }
+
+        #left{
+            color: white;
+            margin-left: 15px;
+            font-family: 'Combo', cursive;
+
+        }
+
+        .hero{
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+            
+        }
+
+        .right{
+            margin-top: 15px;
+            margin-right: 15px;
+            width: 341px;
+            height: 399px;
+            border-radius: 60px;
+            background-color: #DFD7D7;
+            padding: 20px;
+        }
+        input{
+            border-radius: 52px;
+            outline: none;
+            width: 202px;
+            height: 35px;
+            border: none;
+        }
+
+        .k{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button{
+            margin: 5px;
+            width: 55px;
+            height: 35px;
+            border-radius: 67px;
+        }
+
+
+        @media screen and (max-width: 1078px) {
+            .outer{
+                width: 774px;
+                height: 448px;
+            }
+
+            .right{
+                width: 261px;
+                height: 311px;
+                margin-bottom: 25px;
+                margin-left: 15px;
+            }
+        }
+
+        @media screen and (max-width: 839px){
+            .outer{
+                width: 634px;
+                height: 471px;
+            }
+        }
+
+        @media screen and (max-width : 696px) {
+            .outer{
+                width: 538px;
+                height: 409px;
+            }
+
+            .right{
+                width: 218px;
+                height: 245px;
+            }
+
+            input{
+                width: 111px;
+                height: 27px;
+            }
+
+            .heading{
+                font-size: larger;
+            }
+        }
+        @media screen and (max-width : 596px){
+            .outer{
+                width: 398px;
+                height: 351px;
+            }
+
+            .right{
+                width: 174px;
+                height: 204px;
+                border-radius: 27px;
+                margin-top: 19px;
+            }
+
+            .ko{
+                font-size: large;
+            }
+
+            button{
+                width: 34px;
+                height: 34px;
+                padding: 2px;
+            }
+
+            .heading{
+                font-size: medium;
+            }
+
+            .else{
+                font-size: medium;
+            }
+
+            nav{
+                margin: 5px;
+            }
+        }
+
+        @media screen and (max-width: 425px){
+            .outer{
+                width: 298px;
+                height: 476px;
+            }
+
+            .else{
+                display: none;
+            }
+
+            .heading{
+                font-size: x-large;
+            }
+
+            nav{
+                justify-content: center;
+            }
+
+            .hero{
+                flex-direction: column;
+            }
+        }
+
+        @media screen and (max-width: 342px){
+            .outer{
+            width: 276px;
+            height: 453px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <nav>
+            <ul>
+                <div class="heading">
+                    <li>WeatherFeather</li>
+                </div>
+                <div class="else">
+                    <li>About</li>
+                    <li>Contact Us</li>
+                </div>
+            </ul>
+        </nav>
+
+        <div class="hero">
+            <div id="left">
+
+            </div>
+            <div class="right">
+                <div class="k">
+                    <form action="/" method="post">
+                        <input placeholder="Search City name here...." type="text">
+                        <button type="submit"> <img src="./img.svg" alt=""></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+<script>
+    var app = document.getElementById('left');
+
+    var typewriter = new Typewriter(app, {
+        loop: false,
+    });
+
+    typewriter
+        .typeString('<span class="ko" style="font-size: xx-large">Weather Data,</span>')
+        .pauseFor(300)
+        .typeString('<br><br><span style="margin-left: 20px; font-size: large ">anytime, anywhere.....</span>')
+        .pauseFor(1000)
+        .typeString('<br><br><span style="font-size: large">made for</span> ')
+        .typeString(' <span style="color: #EE5700; font-size: larger">CODERS</span>')
+        .deleteChars(6)
+        .typeString(' <span style="color: #EE5700; font-size: larger">physcologers</span>')
+        .deleteChars(12)
+        .typeString(' <span style="color: #EE5700; font-size: larger">reporters</span>')
+        .deleteChars(9)
+        .typeString(' <span style="color: #EE5700; font-size: larger">Steve Jobs</span>')
+        .start();
+</script>
+
+
+
+</html>
